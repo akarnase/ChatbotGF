@@ -1,0 +1,33 @@
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\GFApps\Anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Question'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\GFApps\Anaconda3\Lib\tkinter\__init__.py", line 1948, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\akarnas3\AppData\Local\Temp\1\ipykernel_22848\3683342904.py", line 16, in <lambda>
+    entry.bind("<Return>", lambda event: send_message())  # Send message on pressing Enter
+                                         ^^^^^^^^^^^^^^
+  File "C:\Users\akarnas3\AppData\Local\Temp\1\ipykernel_22848\1100222025.py", line 11, in send_message
+    bot_response = find_answer(user_input, qa_df)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\akarnas3\AppData\Local\Temp\1\ipykernel_22848\3498233864.py", line 5, in find_answer
+    matches = qa_df[qa_df["Question"].str.contains(user_input, case=False, na=False)]
+                    ~~~~~^^^^^^^^^^^^
+  File "C:\GFApps\Anaconda3\Lib\site-packages\pandas\core\frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GFApps\Anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Question
+-----------------------------------------------------------------------------
