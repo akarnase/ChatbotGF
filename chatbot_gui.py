@@ -24,6 +24,9 @@ root = tk.Tk()
 root.title("Chatbot with Excel Q&A")
 root.geometry("400x500")
 
+# Set the window icon (Make sure chatbot.ico is in the same directory)
+root.iconbitmap("chatbot.ico")
+
 # Create a scrolled text widget for the chat display
 chat_window = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=50, height=20, state=tk.DISABLED)
 chat_window.grid(column=0, row=0, padx=10, pady=10, columnspan=2)
